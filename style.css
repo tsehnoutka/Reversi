@@ -1,0 +1,46 @@
+/* Styles go here */
+.header {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid{
+width: 45px;
+height: 45px;
+//border: solid 1px black;
+cursor:pointer;
+background-color: green;
+}
+.score{
+  vertical-align: top;
+  width: 30px;
+}
+td {
+  width: 0px;
+  height: 40px;
+}
+table {
+  margin: 5px auto;
+}
+
+}
+.button{
+  height: 25px;
+  width: 100px
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}

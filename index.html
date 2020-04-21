@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="pageLoad()">
+  <p class="header">Reversi</p>
+  <div style='width:100%; text-align:center;'><a href="https://en.wikipedia.org/wiki/Reversi" target="_blank">info and rules</a></div>
+<table>
+<td class="score">Dark Score:<input name="darkScore" id="dkScr"style="width: 85px" type="text" readonly></td>
+<td>
+  <table>
+    <tr>
+      <td><button id="00" class="grid" ><img src="img/greenSquare.png" id="i00" /></button></td>
+      <td><button id="01" class="grid" ><img src="img/greenSquare.png" id="i01" /></button></td>
+      <td><button id="02" class="grid" ><img src="img/greenSquare.png" id="i02" /></button></td>
+      <td><button id="03" class="grid" ><img src="img/greenSquare.png" id="i03" /></button></td>
+      <td><button id="04" class="grid" ><img src="img/greenSquare.png" id="i04" /></button></td>
+      <td><button id="05" class="grid" ><img src="img/greenSquare.png" id="i05" /></button></td>
+      <td><button id="06" class="grid" ><img src="img/greenSquare.png" id="i06" /></button></td>
+      <td><button id="07" class="grid" ><img src="img/greenSquare.png" id="i07" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="10" class="grid" ><img src="img/greenSquare.png" id="i10" /></button></td>
+      <td><button id="11" class="grid" ><img src="img/greenSquare.png" id="i11" /></button></td>
+      <td><button id="12" class="grid" ><img src="img/greenSquare.png" id="i12" /></button></td>
+      <td><button id="13" class="grid" ><img src="img/greenSquare.png" id="i13" /></button></td>
+      <td><button id="14" class="grid" ><img src="img/greenSquare.png" id="i14" /></button></td>
+      <td><button id="15" class="grid" ><img src="img/greenSquare.png" id="i15" /></button></td>
+      <td><button id="16" class="grid" ><img src="img/greenSquare.png" id="i16" /></button></td>
+      <td><button id="17" class="grid" ><img src="img/greenSquare.png" id="i17" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="20" class="grid" ><img src="img/greenSquare.png" id="i20" /></button></td>
+      <td><button id="21" class="grid" ><img src="img/greenSquare.png" id="i21" /></button></td>
+      <td><button id="22" class="grid" ><img src="img/greenSquare.png" id="i22" /></button></td>
+      <td><button id="23" class="grid" ><img src="img/greenSquare.png" id="i23" /></button></td>
+      <td><button id="24" class="grid" ><img src="img/greenSquare.png" id="i24" /></button></td>
+      <td><button id="25" class="grid" ><img src="img/greenSquare.png" id="i25" /></button></td>
+      <td><button id="26" class="grid" ><img src="img/greenSquare.png" id="i26" /></button></td>
+      <td><button id="27" class="grid" ><img src="img/greenSquare.png" id="i27" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="30" class="grid" ><img src="img/greenSquare.png" id="i30" /></button></td>
+      <td><button id="31" class="grid" ><img src="img/greenSquare.png" id="i31" /></button></td>
+      <td><button id="32" class="grid" ><img src="img/greenSquare.png" id="i32" /></button></td>
+      <td><button id="33" class="grid" ><img src="img/greenSquare.png" id="i33" /></button></td>
+      <td><button id="34" class="grid" ><img src="img/greenSquare.png" id="i34" /></button></td>
+      <td><button id="35" class="grid" ><img src="img/greenSquare.png" id="i35" /></button></td>
+      <td><button id="36" class="grid" ><img src="img/greenSquare.png" id="i36" /></button></td>
+      <td><button id="37" class="grid" ><img src="img/greenSquare.png" id="i37" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="40" class="grid" ><img src="img/greenSquare.png" id="i40" /></button></td>
+      <td><button id="41" class="grid" ><img src="img/greenSquare.png" id="i41" /></button></td>
+      <td><button id="42" class="grid" ><img src="img/greenSquare.png" id="i42" /></button></td>
+      <td><button id="43" class="grid" ><img src="img/greenSquare.png" id="i43" /></button></td>
+      <td><button id="44" class="grid" ><img src="img/greenSquare.png" id="i44" /></button></td>
+      <td><button id="45" class="grid" ><img src="img/greenSquare.png" id="i45" /></button></td>
+      <td><button id="46" class="grid" ><img src="img/greenSquare.png" id="i46" /></button></td>
+      <td><button id="47" class="grid" ><img src="img/greenSquare.png" id="i47" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="50" class="grid" ><img src="img/greenSquare.png" id="i50" /></button></td>
+      <td><button id="51" class="grid" ><img src="img/greenSquare.png" id="i51" /></button></td>
+      <td><button id="52" class="grid" ><img src="img/greenSquare.png" id="i52" /></button></td>
+      <td><button id="53" class="grid" ><img src="img/greenSquare.png" id="i53" /></button></td>
+      <td><button id="54" class="grid" ><img src="img/greenSquare.png" id="i54" /></button></td>
+      <td><button id="55" class="grid" ><img src="img/greenSquare.png" id="i55" /></button></td>
+      <td><button id="56" class="grid" ><img src="img/greenSquare.png" id="i56" /></button></td>
+      <td><button id="57" class="grid" ><img src="img/greenSquare.png" id="i57" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="60" class="grid" ><img src="img/greenSquare.png" id="i60" /></button></td>
+      <td><button id="61" class="grid" ><img src="img/greenSquare.png" id="i61" /></button></td>
+      <td><button id="62" class="grid" ><img src="img/greenSquare.png" id="i62" /></button></td>
+      <td><button id="63" class="grid" ><img src="img/greenSquare.png" id="i63" /></button></td>
+      <td><button id="64" class="grid" ><img src="img/greenSquare.png" id="i64" /></button></td>
+      <td><button id="65" class="grid" ><img src="img/greenSquare.png" id="i65" /></button></td>
+      <td><button id="66" class="grid" ><img src="img/greenSquare.png" id="i66" /></button></td>
+      <td><button id="67" class="grid" ><img src="img/greenSquare.png" id="i67" /></button></td>
+    </tr>
+    <tr>
+      <td><button id="70" class="grid" ><img src="img/greenSquare.png" id="i70" /></button></td>
+      <td><button id="71" class="grid" ><img src="img/greenSquare.png" id="i71" /></button></td>
+      <td><button id="72" class="grid" ><img src="img/greenSquare.png" id="i72" /></button></td>
+      <td><button id="73" class="grid" ><img src="img/greenSquare.png" id="i73" /></button></td>
+      <td><button id="74" class="grid" ><img src="img/greenSquare.png" id="i74" /></button></td>
+      <td><button id="75" class="grid" ><img src="img/greenSquare.png" id="i75" /></button></td>
+      <td><button id="76" class="grid" ><img src="img/greenSquare.png" id="i76" /></button></td>
+      <td><button id="77" class="grid" ><img src="img/greenSquare.png" id="i77" /></button></td>
+    </tr>
+  </table>
+  </td>
+  <td class="score">Light Score:<br><input name="LigthScore" id="ltScr" style="width: 85px" type="text" readonly></td>
+  </table>
+  <table>
+    <tr>
+      <td><button id="playagain" class="button" onclick="Reset()" value="Play Again">Reset</button></td>
+      <td>
+        <p align="right">Turn:</p>
+      </td>
+      <td>
+        <div id="turnbox" class=cube style="background-color: black ; padding: 10px; border: 1px solid black;"></div>
+      </td>
+      <!--<td><button id="Undo" class="button" onclick="Undo()" value="Play Again" >Undo</button></td> -->
+    </tr>
+  </table>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="test.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
